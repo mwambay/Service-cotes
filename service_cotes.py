@@ -25,9 +25,5 @@ def get_grades(student_id):
         return jsonify(students_grades[student_id])
     return jsonify({'error': 'Etudiant non trouvé'}), 404
 
-@app.route('/get_all_grades', methods=['GET'])
-def get_all_grades():
-    return jsonify(students_grades)
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001, debug=True)
